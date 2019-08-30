@@ -25,13 +25,13 @@
 2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq申请
 
 
-        ``` php
-            <?php 
-                define('chat_host', '聊天ip地址');
-                define('chat_sync_api', '聊天系统地址');
-                define('chat_sync_appid', '聊天appid');
-                define('chat_sync_secretKey', '密码');
-            ?>
+        ``` 
+        <?php 
+            define('chat_host', '聊天ip地址');
+            define('chat_sync_api', '聊天系统地址');
+            define('chat_sync_appid', '聊天appid');
+            define('chat_sync_secretKey', '密码');
+        ?>
         ```
 
 
@@ -40,9 +40,13 @@
 ![修改CityCommand.php](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135707.png)
 
 
-4.  修改`server/game/Login.php`完成登录会话同步
+4.  修改`server/game/Login.php`完成登录会话同步,请注意要修改两个地方
+
+第一步
 
 ![修改Login.php第一步，导入文件](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135853.png)  
+
+第二步
 
 ![修改Login.php第二步，同步会话](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830140020.png)  
 
