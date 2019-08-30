@@ -22,7 +22,7 @@
 ![下载zip包](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
 
 
-2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq申请
+2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq群：769606391 咨询并申请
 
 
         ``` 
