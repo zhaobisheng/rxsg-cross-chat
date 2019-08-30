@@ -46,11 +46,11 @@
 
 - 4.  修改`server/game/Login.php`完成登录会话同步,请注意要修改两个地方
 
--- 第一步
+--  第一步
 
 ![修改Login.php第一步，导入文件](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135853.png)  
 
--- 第二步
+--  第二步
 
 ![修改Login.php第二步，同步会话](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830140020.png)  
 
