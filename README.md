@@ -18,8 +18,13 @@
 # 详细步骤和示意图
 
 1.  下载zip包
+
 ![下载zip包](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
+
+
 2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq申请
+
+
         ``` php
             <?php 
                 define('chat_host', '聊天ip地址');
@@ -29,11 +34,14 @@
             ?>
         ```
 
+
 3.  修改`server/game/CityCommand.php`接入实时会话和系统消息同步,参考示意图
+
 ![修改CityCommand.php](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135707.png)
 
 
 4.  修改`server/game/Login.php`完成登录会话同步
+
 ![修改Login.php第一步，导入文件](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135853.png)  
 
 ![修改Login.php第二步，同步会话](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830140020.png)  
