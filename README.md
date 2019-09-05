@@ -67,7 +67,7 @@
 
 # 版本规划和后续计划
 
-后续会继续完善，提供更加方便好用的功能，供大家娱乐。有问题请提交![issues](https://github.com/chinaluopiao/rxsg-cross-chat/issues)
+后续会继续完善，提供更加方便好用的功能，供大家娱乐。有问题请提交[issues](https://github.com/chinaluopiao/rxsg-cross-chat/issues)
 
 
 
