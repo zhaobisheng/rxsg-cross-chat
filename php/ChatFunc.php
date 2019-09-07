@@ -1,7 +1,6 @@
 <?php
     require_once("./interface.php");
     require_once("./global.php");
-    require_once("../../index_top.php");
     require_once("../config/chathost.php");
 
     function syncSession($uid,$sid){
@@ -12,9 +11,9 @@
             $designation = sql_fetch_one("select * from cfg_designation where did='$userDid'");
             $userbattleinfo = sql_fetch_one("select * from sys_user_battle_state where uid='$uid' limit 1");
             $post_data = array(
-                'server' => constant("TITLE"),
                 'uid' => $uid,
                 'sid' => $sid,
+                'index' => constant("chat_server_index"),
                 'name' => $user['name'],
                 'unionId' => $user['union_id'],
                 'battleId'=> $userbattleinfo['bid'],
@@ -34,7 +33,7 @@
 
     function syncInform(){
         try{
-            $sys_informs = sql_fetch_rows("SELECT *,'".constant("TITLE")."' AS `server`  FROM sys_inform WHERE starttime <= UNIX_TIMESTAMP() AND endtime >= UNIX_TIMESTAMP() AND scrollcount > 0");
+            $sys_informs = sql_fetch_rows("SELECT *,'".constant("chat_server_index")."' AS `index`  FROM sys_inform WHERE starttime <= UNIX_TIMESTAMP() AND endtime >= UNIX_TIMESTAMP() AND scrollcount > 0");
             return sendPost(chat_sync_api.'/message/syncInform', $sys_informs);
             //sql_query("delete from sys_inform where endtime<UNIX_TIMESTAMP() ");//删掉时间过了的
         }catch(Exception $e){
@@ -52,7 +51,7 @@
                 'header' => "Content-type:application/json;charset=UTF-8\r\n".
                     "Authorization: ".$authorization."\r\n",
                 'content' => json_encode($post_data),
-                'timeout' => 15 * 60 // 超时时间（单位:s）
+                'timeout' => 3 // 超时时间（单位:s）
             )
         );
         $context = stream_context_create($options);
