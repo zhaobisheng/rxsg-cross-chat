@@ -65,7 +65,7 @@
     function getAuthorization(){
         $appid = chat_sync_appid;
         $secretKey = chat_sync_secretKey;
-        $timestamp = time()*1000;
+        $timestamp = time();
         $nonce = md5(uniqid(microtime(true),true));
         $sign = md5("appid".$appid."nonce".$nonce."secretKey".$secretKey."timestamp".$timestamp);
         $arr = array("appid"=>$appid,"secretKey"=>$secretKey,"timestamp"=>$timestamp,"nonce"=>$nonce,"sign"=>$sign);
