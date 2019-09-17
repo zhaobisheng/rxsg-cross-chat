@@ -35,7 +35,7 @@
     function syncInform(){
         try{
             $sys_informs = sql_fetch_rows("SELECT *,'".constant("TITLE")."' AS `server`  FROM sys_inform WHERE starttime <= UNIX_TIMESTAMP() AND endtime >= UNIX_TIMESTAMP() AND scrollcount > 0");
-            return sendPost(chat_sync_api.'/message/syncInform', $sys_informs);
+            return sendPost(chat_sync_api.'/message/sync', $sys_informs);
             //sql_query("delete from sys_inform where endtime<UNIX_TIMESTAMP() ");//删掉时间过了的
         }catch(Exception $e){
             return "";
