@@ -34,8 +34,8 @@
     function syncInform(){
         try{
             $sys_informs = sql_fetch_rows("SELECT *,'".constant("chat_server_index")."' AS `index`  FROM sys_inform WHERE starttime <= UNIX_TIMESTAMP() AND endtime >= UNIX_TIMESTAMP() AND scrollcount > 0");
-            return sendPost(chat_sync_api.'/message/syncInform', $sys_informs);
-            //sql_query("delete from sys_inform where endtime<UNIX_TIMESTAMP() ");//删掉时间过了的
+            sql_query("delete from sys_inform where endtime<UNIX_TIMESTAMP() AND scrollcount > 0");//删掉时间过了的
+			return sendPost(chat_sync_api.'/message/sync', $sys_informs);
         }catch(Exception $e){
             return "";
         }
@@ -51,7 +51,7 @@
                 'header' => "Content-type:application/json;charset=UTF-8\r\n".
                     "Authorization: ".$authorization."\r\n",
                 'content' => json_encode($post_data),
-                'timeout' => 3 // 超时时间（单位:s）
+                'timeout' => 1 // 超时时间（单位:s）
             )
         );
         $context = stream_context_create($options);
