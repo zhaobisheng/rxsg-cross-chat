@@ -45,7 +45,7 @@
 
     ### 和QQ机器人聊天发送`添加:你的服务器名称`,如下图
 
-    [申请参数](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
+    ![申请参数](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
         
         
         
