@@ -3,6 +3,16 @@ require_once("./interface.php");
 require_once("./global.php");
 require_once("../config/chathost.php");
 
+function CompleteMaQue($uid){
+    $gid=sql_fetch_one("select count from from log_action_count where uid=".$uid." and aid=17");
+    if($gid>1000){
+        return;
+    }else{
+        sql_query("INSERT INTO `sys_user_achivement`(`uid`, `achivement_id`, `time`) VALUES (".$uid.", 1, ".time().")");
+        sql_query("insert into log_action_count set  uid = ".$uid." ,aid  ='17',count  = '1000' ON DUPLICATE KEY UPDATE count  = count +'1000'");
+    }
+}
+
 function syncSession($uid, $sid) {
     try {
         $user = sql_fetch_one("select * from sys_user where uid='$uid'");
