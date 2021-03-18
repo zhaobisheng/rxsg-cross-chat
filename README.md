@@ -43,11 +43,12 @@
 
 - 2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq机器人：1050179288 发送命令申请(2021年4月1日前开放管理员权限)
 
+
     ### 和QQ机器人聊天发送`添加:你的服务器名称`,如下图
 
     ![申请参数](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
         
-        
+    #### 如果想不接入参数，直接修改`chathost.php`文件的聊天连接地址即可进入公共聊天区    
         
         ``` 
             define('chat_host', 'chat.funwan.cn');
@@ -66,7 +67,10 @@
 
 - 4.  修改`server/game/Login.php`完成登录会话同步,请注意要修改两个地方
 
+       #### 在上方syncSession($uid,$sid);上方添加 CompleteMaQue($uid); 登录游戏即可完成麻雀成就
+       
 第一步
+
 
 ![修改Login.php第一步，导入文件](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135853.png)  
 
