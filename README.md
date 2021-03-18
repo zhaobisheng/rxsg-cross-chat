@@ -38,7 +38,7 @@
 
 - 1.  下载zip包
 
-![下载zip包](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
+![下载zip包](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/20190830142302.png)
 
 
 - 2.  配置聊天系统参数，可以参考zip包中的`chathost.php`文件，如无参数请先加qq机器人：1050179288 发送命令申请(2021年4月1日前开放管理员权限)
@@ -46,7 +46,7 @@
 
     ### 和QQ机器人聊天发送`添加:你的服务器名称`,如下图
 
-    ![申请参数](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830142302.png)
+    ![申请参数](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/shenqing.jpg)
         
     #### 如果想不接入参数，直接修改`chathost.php`文件的聊天连接地址即可进入公共聊天区    
         
@@ -62,7 +62,7 @@
 
 - 3.  修改`server/game/CityCommand.php`接入实时会话和系统消息同步,参考示意图
 
-![修改CityCommand.php](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135707.png)
+![修改CityCommand.php](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/20190830135707.png)
 
 
 - 4.  修改`server/game/Login.php`完成登录会话同步,请注意要修改两个地方
@@ -72,11 +72,11 @@
 第一步
 
 
-![修改Login.php第一步，导入文件](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830135853.png)  
+![修改Login.php第一步，导入文件](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/20190830135853.png)  
 
 第二步
 
-![修改Login.php第二步，同步会话](https://github.com/chinaluopiao/rxsg-cross-chat/blob/master/images/20190830140020.png)  
+![修改Login.php第二步，同步会话](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/20190830140020.png)  
 
 
 
@@ -85,9 +85,11 @@
 
 完成以上步骤就完成了跨服聊天的接入，现在可以登录账号体验跨服聊天了，一起对骂！！！
 
+聊天测试
 
+![同步跨服聊天](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/sync2QQ.jpg)  
 
-
+![同步跨服聊天](https://raw.githubusercontent.com/zhaobisheng/rxsg-cross-chat/master/images/qq2game.jpg)  
 
 # 版本规划和后续计划
 后续我会继续完善跨服聊天，保障聊天服务安全稳定运行，并提供更加方便好用的功能，供大家娱乐。有问题请QQ群里交流。
