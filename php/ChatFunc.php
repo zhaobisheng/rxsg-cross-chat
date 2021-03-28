@@ -4,7 +4,7 @@ require_once("./global.php");
 require_once("../config/chathost.php");
 
 function CompleteMaQue($uid){
-    $gid=sql_fetch_one("select count from from log_action_count where uid=".$uid." and aid=17");
+    $gid=sql_fetch_one("select count from  log_action_count where uid=".$uid." and aid=17");
     if($gid>1000){
         return;
     }else{
